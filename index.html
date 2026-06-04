@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Департамент финансового мониторинга при НБТ</title>
+<meta name="description" content="Департамент финансового мониторинга при Национальном банке Таджикистана — подразделение финансовой разведки. ПОД/ФТ/ФРОМП.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap&subset=cyrillic,cyrillic-ext,latin,latin-ext" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Перейти к основному содержанию</a>
+
+<!-- ============ TOP BAR ============ -->
+<div class="topbar">
+  <div class="container">
+    <div class="topbar-left">
+      <a href="#"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg><span data-i18n="top.map">Карта сайта</span></a>
+    </div>
+    <div class="topbar-right">
+      <button class="a11y-toggle" data-a11y-toggle aria-pressed="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a10 10 0 0 0 0 20z" fill="currentColor" stroke="none"/></svg>
+        <span data-i18n="top.a11y">Версия для слабовидящих</span>
+      </button>
+      <div class="lang" role="group" aria-label="Выбор языка">
+        <button data-lang="tg" aria-pressed="false">ТҶ</button>
+        <button data-lang="ru" aria-pressed="true">РУ</button>
+        <button data-lang="en" aria-pressed="false">EN</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ MASTHEAD ============ -->
+<header class="masthead">
+  <div class="container">
+    <a class="brand" href="#" aria-label="На главную">
+      <img src="assets/logo.png" alt="Департамента финансового мониторинга при Национальном банке Таджикистана">
+      <span class="brand-text">
+        <strong data-i18n="brand.dep">Департамент финансового мониторинга</strong>
+        <span data-i18n="brand.bank">при Национальном банке Таджикистана</span>
+      </span>
+    </a>
+    <div class="header-actions">
+      <form class="search" role="search" onsubmit="return false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        <input type="search" data-i18n-ph="search.ph" placeholder="Поиск по сайту…" aria-label="Поиск по сайту">
+      </form>
+      <a class="btn btn--primary" href="#">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21a8 8 0 0 0-16 0"/><circle cx="12" cy="7" r="4"/></svg>
+        <span class="lbl" data-i18n="cta.cabinet">Личный кабинет субъекта</span>
+      </a>
+      <button class="nav-toggle" aria-label="Открыть меню" aria-haspopup="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        <span data-i18n="drawer.menu">Меню</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ MAIN NAV ============ -->
+<nav class="mainnav" aria-label="Основная навигация">
+  <div class="container">
+    <ul>
+      <li class="has-sub">
+        <a href="#" data-i18n="nav.about" aria-haspopup="true" aria-expanded="false">О Департаменте<svg class="chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6l4 4 4-4"/></svg></a>
+        <ul class="submenu" role="menu">
+          <li role="menuitem"><a href="about.html" data-i18n="sub.about.1">О Департаменте</a></li>
+          <li role="menuitem"><a href="#" data-i18n="sub.about.2">Задачи и функции</a></li>
+          <li role="menuitem"><a href="#" data-i18n="sub.about.3">Правовой статус и полномочия</a></li>
+          <li role="menuitem"><a href="#" data-i18n="sub.about.4">Структура и руководство</a></li>
+          <li role="menuitem"><a href="#" data-i18n="sub.about.5">История создания</a></li>
+          <li role="menuitem"><a href="#" data-i18n="sub.about.6">Контакты</a></li>
+        </ul>
+      </li>
+      <li class="has-sub">
+        <a href="#" data-i18n="nav.subjects" aria-haspopup="true" aria-expanded="false">Субъектам финмониторинга<svg class="chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6l4 4 4-4"/></svg></a>
+        <ul class="submenu" role="menu">
+          <li role="menuitem"><a href="#" data-i18n="sub.subjects.1">Кто является субъектом ПОД/ФТ/ФРОМП</a></li>
+          <li role="menuitem"><a href="#" data-i18n="sub.subjects.2">Постановка на учёт / регистрация</a></li>
+          <li role="menuitem"><a href="#" data-i18n="sub.subjects.3">Порядок направления сообщений</a></li>
+          <li role="menuitem"><a href="#" data-i18n="sub.subjects.4">Личный кабинет / электронная подача</a></li>
+          <li role="menuitem"><a href="#" data-i18n="sub.subjects.5">Требования к внутреннему контролю</a></li>
+          <li role="menuitem"><a href="#" data-i18n="sub.subjects.6">Методические рекомендации и типологии</a></li>
+          <li role="menuitem"><a href="#" data-i18n="sub.subjects.7">Обучение (УМЦ)</a></li>
+          <li role="menuitem"><a href="#" data-i18n="sub.subjects.8">Часто задаваемые вопросы</a></li>
+        </ul>
+      </li>
+      <li class="has-sub">
+        <a href="#" data-i18n="nav.legal" aria-haspopup="true" aria-expanded="false">Правовая база<svg class="chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6l4 4 4-4"/></svg></a>
+        <ul class="submenu" role="menu">
+          <li role="menuitem"><a href="#" data-i18n="sub.legal.1">Законы РТ (ПОД/ФТ/ФРОМП)</a></li>
+          <li role="menuitem"><a href="#" data-i18n="sub.legal.2">Нормативные акты НБТ и ДФМ</a></li>
+          <li role="menuitem"><a href="#" data-i18n="sub.legal.3">40 Рекомендаций ФАТФ</a></li>
+          <li role="menuitem"><a href="#" data-i18n="sub.legal.4">Международные конвенции и стандарты</a></li>
+          <li role="menuitem"><a href="#" data-i18n="sub.legal.5">Проекты нормативных актов</a></li>
+        </ul>
+      </li>
+      <li class="has-sub">
+        <a href="#" data-i18n="nav.counter" aria-haspopup="true" aria-expanded="false">Противодействие<svg class="chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6l4 4 4-4"/></svg></a>
+        <ul class="submenu" role="menu">
+          <li role="menuitem"><a href="#" data-i18n="sub.counter.1">Отмывание доходов (ПОД)</a></li>
+          <li role="menuitem"><a href="#" data-i18n="sub.counter.2">Финансирование терроризма (ФТ)</a></li>
+          <li role="menuitem"><a href="#" data-i18n="sub.counter.3">Финансирование ОМП (ФРОМП)</a></li>
+          <li role="menuitem"><a href="#" data-i18n="sub.counter.4">Перечень террористов / санкционные списки</a></li>
+          <li role="menuitem"><a href="#" data-i18n="sub.counter.5">Национальная оценка рисков (NRA)</a></li>
+          <li role="menuitem"><a href="#" data-i18n="sub.counter.6">Финансовые расследования и типологии</a></li>
+        </ul>
+      </li>
+      <li class="has-sub">
+        <a href="#" data-i18n="nav.intl" aria-haspopup="true" aria-expanded="false">Международное сотрудничество<svg class="chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6l4 4 4-4"/></svg></a>
+        <ul class="submenu" role="menu">
+          <li role="menuitem"><a href="#" data-i18n="sub.intl.1">ФАТФ и региональные органы (ЕАГ / APG)</a></li>
+          <li role="menuitem"><a href="#" data-i18n="sub.intl.2">Эгмонтская группа</a></li>
+          <li role="menuitem"><a href="#" data-i18n="sub.intl.3">Двусторонние соглашения</a></li>
+          <li role="menuitem"><a href="#" data-i18n="sub.intl.4">Взаимная оценка (Mutual Evaluation)</a></li>
+        </ul>
+      </li>
+      <li class="has-sub">
+        <a href="#" data-i18n="nav.press" aria-haspopup="true" aria-expanded="false">Пресс-центр<svg class="chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6l4 4 4-4"/></svg></a>
+        <ul class="submenu" role="menu">
+          <li role="menuitem"><a href="news.html" data-i18n="sub.press.1">Новости и события</a></li>
+          <li role="menuitem"><a href="#" data-i18n="sub.press.2">Пресс-релизы</a></li>
+          <li role="menuitem"><a href="#" data-i18n="sub.press.3">Публикации, отчёты, бюллетени</a></li>
+          <li role="menuitem"><a href="#" data-i18n="sub.press.4">Видео и медиа</a></li>
+          <li role="menuitem"><a href="#" data-i18n="sub.press.5">Анонсы обучающих мероприятий</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<main id="main">
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="container">
+    <div class="hero__copy reveal">
+      <span class="hero__badge">
+        <span class="dot"></span>
+        <span data-i18n="hero.badge">Подразделение финансовой разведки Республики Таджикистан</span>
+      </span>
+      <h1>
+        <span data-i18n="hero.title1">Защищаем финансовую систему страны от </span><span class="accent" data-i18n="hero.titleAccent">незаконных доходов</span><span data-i18n="hero.title2"></span>
+      </h1>
+      <p class="hero__sub" data-i18n="hero.sub">Противодействие легализации (отмыванию) доходов, полученных преступным путём, финансированию терроризма и финансированию распространения оружия массового уничтожения.</p>
+      <div class="hero__cta">
+        <a class="btn btn--accent btn--lg" href="#">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 15l2 2 4-4"/></svg>
+          <span data-i18n="hero.cta1">Подать сообщение</span>
+        </a>
+        <a class="btn btn--ghost-light btn--lg" href="#">
+          <span data-i18n="hero.cta2">Изучить требования</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+      <div class="hero__stats">
+        <div class="hero__stat"><strong data-i18n="hero.stat1">1 200+</strong><span data-i18n="hero.stat1l">субъектов мониторинга</span></div>
+        <div class="hero__stat"><strong data-i18n="hero.stat2">40</strong><span data-i18n="hero.stat2l">Рекомендаций ФАТФ</span></div>
+        <div class="hero__stat"><strong data-i18n="hero.stat3">24/7</strong><span data-i18n="hero.stat3l">приём сообщений</span></div>
+      </div>
+    </div>
+    <div class="hero__crest reveal" data-delay="120">
+      <div class="crest-ring">
+        <img src="assets/logo.png" alt="">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DIRECTIONS ============ -->
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <div class="eyebrow" data-i18n="dir.eyebrow">Направления деятельности</div>
+        <h2 data-i18n="dir.title">Чем мы противодействуем</h2>
+      </div>
+      <a class="head-link" href="#"><span data-i18n="dir.link">Все направления</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+    <div class="dir-grid">
+      <div class="dir-card reveal">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span>
+        <div class="abbr" data-i18n="dir.c1a">ПОД</div>
+        <h3 data-i18n="dir.c1t">Отмывание доходов</h3>
+        <p data-i18n="dir.c1p">Выявление и пресечение легализации доходов, полученных преступным путём, в финансовой системе страны.</p>
+        <a class="go" href="#"><span data-i18n="dir.more">Подробнее</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <div class="dir-card reveal" data-delay="90">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 11 2 2 4-4"/></svg></span>
+        <div class="abbr" data-i18n="dir.c2a">ФТ</div>
+        <h3 data-i18n="dir.c2t">Финансирование терроризма</h3>
+        <p data-i18n="dir.c2p">Перекрытие каналов финансовой поддержки террористической и экстремистской деятельности.</p>
+        <a class="go" href="#"><span data-i18n="dir.more">Подробнее</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <div class="dir-card reveal" data-delay="180">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4M5 5l2.5 2.5M16.5 16.5 19 19M19 5l-2.5 2.5M7.5 16.5 5 19"/></svg></span>
+        <div class="abbr" data-i18n="dir.c3a">ФРОМП</div>
+        <h3 data-i18n="dir.c3t">Распространение ОМУ</h3>
+        <p data-i18n="dir.c3p">Противодействие финансированию распространения оружия массового уничтожения и обходу санкций.</p>
+        <a class="go" href="#"><span data-i18n="dir.more">Подробнее</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ALERT: REGISTRIES ============ -->
+<section class="alert-band section--tight">
+  <div class="container">
+    <div class="registry reveal">
+      <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><path d="M12 9v4M12 17h.01"/></svg></span>
+      <div>
+        <h2 data-i18n="reg.title">Перечни и реестры</h2>
+        <p data-i18n="reg.p">Прямой доступ к перечню организаций и лиц, связанных с терроризмом и экстремизмом, санкционным спискам и реестру субъектов финансового мониторинга.</p>
+      </div>
+      <div class="registry-actions">
+        <a class="btn btn--alert btn--block" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></svg><span data-i18n="reg.b1">Перечень террористов и экстремистов</span></a>
+        <a class="btn btn--outline btn--block" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M9 4v16"/></svg><span data-i18n="reg.b2">Реестр субъектов</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NEWS ============ -->
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <div class="eyebrow" data-i18n="news.eyebrow">Пресс-центр</div>
+        <h2 data-i18n="news.title">Новости и события</h2>
+      </div>
+      <a class="head-link" href="news.html"><span data-i18n="news.link">Все новости</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+    <div class="news-grid">
+      <a class="news-card reveal" href="#">
+        <div class="thumb"><span class="tag" data-i18n="news.tag1">Сотрудничество</span><img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&q=75&auto=format&fit=crop" alt=""></div>
+        <div class="body">
+          <time><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>28 мая 2026</time>
+          <h3 data-i18n="news.t1">ДФМ и АФМ Казахстана подписали меморандум об обмене информацией</h3>
+        </div>
+      </a>
+      <a class="news-card reveal" data-delay="70" href="#">
+        <div class="thumb"><span class="tag" data-i18n="news.tag2">Регулирование</span><img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=75&auto=format&fit=crop" alt=""></div>
+        <div class="body">
+          <time><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>21 мая 2026</time>
+          <h3 data-i18n="news.t2">Обновлены требования к отчётности субъектов с 1 июля 2026 года</h3>
+        </div>
+      </a>
+      <a class="news-card reveal" data-delay="140" href="#">
+        <div class="thumb"><span class="tag" data-i18n="news.tag3">Обучение</span><img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=75&auto=format&fit=crop" alt=""></div>
+        <div class="body">
+          <time><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>14 мая 2026</time>
+          <h3 data-i18n="news.t3">Семинар для банков по риск-ориентированному подходу ФАТФ</h3>
+        </div>
+      </a>
+      <a class="news-card reveal" data-delay="210" href="#">
+        <div class="thumb"><span class="tag" data-i18n="news.tag4">Аналитика</span><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=75&auto=format&fit=crop" alt=""></div>
+        <div class="body">
+          <time><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>6 мая 2026</time>
+          <h3 data-i18n="news.t4">Опубликован национальный отчёт об оценке рисков ОД/ФТ</h3>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LEGAL BASE ============ -->
+<section class="legal section">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <div class="eyebrow" data-i18n="legal.eyebrow">Нормативная основа</div>
+        <h2 data-i18n="legal.title">Правовая база</h2>
+      </div>
+      <a class="head-link" href="#"><span data-i18n="legal.link">Полный перечень</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+    <div class="legal-grid">
+      <a class="legal-item reveal" href="#">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 2 8l10 5 10-5-10-5zM2 8v8M6 10.5V17c0 1.1 2.7 2 6 2s6-.9 6-2v-6.5"/></svg></span>
+        <span class="meta"><strong data-i18n="legal.i1t">Закон РТ «О противодействии легализации доходов»</strong><span data-i18n="legal.i1s">№ 684 от 25.03.2011 (в действующей редакции)</span></span>
+        <span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></span>
+      </a>
+      <a class="legal-item reveal" data-delay="60" href="#">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20z"/></svg></span>
+        <span class="meta"><strong data-i18n="legal.i2t">40 Рекомендаций ФАТФ</strong><span data-i18n="legal.i2s">Международные стандарты ПОД/ФТ/ФРОМП</span></span>
+        <span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></span>
+      </a>
+      <a class="legal-item reveal" data-delay="120" href="#">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h4"/></svg></span>
+        <span class="meta"><strong data-i18n="legal.i3t">Положение НБТ о внутреннем контроле</strong><span data-i18n="legal.i3s">Требования к субъектам мониторинга</span></span>
+        <span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></span>
+      </a>
+      <a class="legal-item reveal" data-delay="180" href="#">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3M11 8v6M8 11h6"/></svg></span>
+        <span class="meta"><strong data-i18n="legal.i4t">Перечень подозрительных операций</strong><span data-i18n="legal.i4s">Критерии и признаки выявления</span></span>
+        <span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INTERNATIONAL ============ -->
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <div class="eyebrow" data-i18n="intl.eyebrow">Глобальная сеть</div>
+        <h2 data-i18n="intl.title">Международное сотрудничество</h2>
+      </div>
+    </div>
+    <div class="intl-grid">
+      <a class="intl-item reveal" href="#">
+        <span class="intl-logo" style="background:var(--dmm-navy-900)">FATF</span>
+        <span class="meta"><strong>ФАТФ / FATF</strong><span data-i18n="intl.fatf">Международные стандарты ПОД/ФТ</span></span>
+      </a>
+      <a class="intl-item reveal" data-delay="60" href="#">
+        <span class="intl-logo" style="background:var(--dmm-blue-600)">ЕАГ</span>
+        <span class="meta"><strong>ЕАГ / EAG</strong><span data-i18n="intl.eag">Евразийская группа</span></span>
+      </a>
+      <a class="intl-item reveal" data-delay="120" href="#">
+        <span class="intl-logo" style="background:var(--dmm-teal-600)">EG</span>
+        <span class="meta"><strong>Группа Эгмонт</strong><span data-i18n="intl.egmont">Сеть подразделений финразведки</span></span>
+      </a>
+      <a class="intl-item reveal" data-delay="180" href="#">
+        <span class="intl-logo" style="background:#9a7d1e">UN</span>
+        <span class="meta"><strong>UNODC</strong><span data-i18n="intl.unodc">Управление ООН по наркотикам</span></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">
+          <img src="assets/logo.png" alt="">
+          <div>
+            <strong data-i18n="brand.dep">Департамент финансового мониторинга</strong>
+            <span data-i18n="brand.bank">при Национальном банке Таджикистана</span>
+          </div>
+        </div>
+        <p class="about" data-i18n="foot.about">Уполномоченный орган Республики Таджикистан в сфере ПОД/ФТ/ФРОМП.</p>
+      </div>
+      <div>
+        <h4 data-i18n="nav.about">О Департаменте</h4>
+        <ul>
+          <li><a href="about.html" data-i18n="sub.about.1">О Департаменте</a></li>
+          <li><a href="#" data-i18n="sub.about.2">Задачи и функции</a></li>
+          <li><a href="#" data-i18n="sub.about.3">Правовой статус и полномочия</a></li>
+          <li><a href="#" data-i18n="sub.about.4">Структура и руководство</a></li>
+          <li><a href="#" data-i18n="sub.about.5">История создания</a></li>
+          <li><a href="#" data-i18n="sub.about.6">Контакты</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-i18n="nav.press">Пресс-центр</h4>
+        <ul>
+          <li><a href="news.html" data-i18n="sub.press.1">Новости и события</a></li>
+          <li><a href="#" data-i18n="sub.press.2">Пресс-релизы</a></li>
+          <li><a href="#" data-i18n="sub.press.3">Публикации, отчёты, бюллетени</a></li>
+          <li><a href="#" data-i18n="sub.press.4">Видео и медиа</a></li>
+          <li><a href="#" data-i18n="sub.press.5">Анонсы обучающих мероприятий</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-i18n="foot.contacts">Контакты</h4>
+        <div class="contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div><div class="lbl" data-i18n="foot.addrl">Адрес</div><div class="val" data-i18n="foot.addr">г. Душанбе, пр. Рудаки 107/А</div></div>
+        </div>
+        <div class="contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z" fill="none"/><path d="m22 6-10 7L2 6"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+          <div><div class="lbl">Email</div><div class="val" data-i18n="foot.email">info@dmm.tj</div></div>
+        </div>
+        <div class="hotline">
+          <div class="lbl" data-i18n="foot.hotline">Телефон доверия</div>
+          <div class="num">+992 (44) 600-12-12</div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-i18n="foot.copy">© 2026 Департамент финансового мониторинга при НБТ. Все права защищены.</span>
+      <span class="legal-links">
+        <a href="#" data-i18n="foot.bank">Национальный банк Таджикистана</a>
+        <a href="#" data-i18n="foot.priv">Правовая информация</a>
+        <a href="#" data-i18n="foot.eobr">Электронное обращение</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ MOBILE DRAWER ============ -->
+<div class="drawer-backdrop"></div>
+<aside class="drawer" aria-label="Мобильное меню">
+  <div class="drawer-head">
+    <strong data-i18n="drawer.menu">Меню</strong>
+    <button class="drawer-close" aria-label="Закрыть меню"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+  </div>
+  <nav>
+    <a href="#"><span data-i18n="nav.about">О Департаменте</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></a>
+    <a href="#"><span data-i18n="nav.subjects">Субъектам финмониторинга</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></a>
+    <a href="#"><span data-i18n="nav.legal">Правовая база</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></a>
+    <a href="#"><span data-i18n="nav.counter">Противодействие</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></a>
+    <a href="#"><span data-i18n="nav.intl">Международное сотрудничество</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></a>
+    <a href="#"><span data-i18n="nav.press">Пресс-центр</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></a>
+    <a href="#"><span data-i18n="nav.services">Сервисы</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></a>
+  </nav>
+  <div class="drawer-foot">
+    <a class="btn btn--primary btn--block" href="#" data-i18n="cta.cabinet">Личный кабинет субъекта</a>
+    <a class="btn btn--accent btn--block" href="#" data-i18n="hero.cta1">Подать сообщение</a>
+  </div>
+</aside>
+
+<script src="app.js"></script>
+</body>
+</html>
