@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Публикации, отчёты, бюллетени — Пресс-центр — ДФМ при НБТ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap&subset=cyrillic,cyrillic-ext,latin,latin-ext" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+.year-tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.ytab{padding:6px 14px;border-radius:8px;font-size:.85rem;font-weight:600;cursor:pointer;border:1.5px solid var(--dmm-line-200);background:#fff;color:var(--dmm-ink-600);transition:all .15s}
+.ytab.active,.ytab:hover{background:var(--dmm-blue-600);color:#fff;border-color:var(--dmm-blue-600)}
+.pub-list{display:flex;flex-direction:column;gap:14px}
+.pub-item{background:#fff;border:1.5px solid var(--dmm-line-200);border-radius:10px;padding:16px 18px;display:flex;gap:16px;align-items:flex-start}
+.pub-icon{width:44px;height:44px;background:#fee2e2;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:.7rem;font-weight:800;color:#dc2626;letter-spacing:.03em}
+.pub-body{flex:1}
+.pub-body h3{font-size:.95rem;font-weight:700;margin:0 0 4px;color:var(--dmm-navy-900)}
+.pub-body p{margin:0 0 10px;font-size:.85rem;color:var(--dmm-ink-600);line-height:1.5}
+.pub-meta{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.pub-date{font-size:.78rem;color:var(--dmm-ink-600)}
+.pub-size{font-size:.78rem;color:var(--dmm-ink-600);background:var(--dmm-bg-50);padding:2px 6px;border-radius:4px}
+.pub-badge{font-size:.7rem;font-weight:700;padding:2px 8px;border-radius:4px;text-transform:uppercase;letter-spacing:.04em}
+.badge-annual{background:#dbeafe;color:#1e40af}
+.badge-bulletin{background:#dcfce7;color:#166534}
+.badge-method{background:#fef3c7;color:#92400e}
+.btn-sm{display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border-radius:8px;font-size:.78rem;font-weight:600;cursor:pointer;text-decoration:none;transition:background .15s,color .15s}
+.btn-sm--outline{border:1.5px solid var(--dmm-blue-600);color:var(--dmm-blue-600);background:#fff}
+.btn-sm--outline:hover{background:var(--dmm-blue-100)}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Перейти к основному содержанию</a>
+<div class="topbar"><div class="container"><div class="topbar-left"><a href="sitemap.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg><span data-i18n="top.map">Карта сайта</span></a></div><div class="topbar-right"><button class="a11y-toggle" data-a11y-toggle aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a10 10 0 0 0 0 20z" fill="currentColor" stroke="none"/></svg><span data-i18n="top.a11y">Версия для слабовидящих</span></button><div class="lang" role="group" aria-label="Выбор языка"><button data-lang="tg" aria-pressed="false">ТҶ</button><button data-lang="ru" aria-pressed="true">РУ</button><button data-lang="en" aria-pressed="false">EN</button></div></div></div></div>
+<header class="masthead"><div class="container"><a class="brand" href="index.html" aria-label="На главную"><img src="assets/logo.png" alt="ДФМ при НБТ"><span class="brand-text"><strong data-i18n="brand.dep">Департамент финансового мониторинга</strong><span data-i18n="brand.bank">при Национальном банке Таджикистана</span></span></a><div class="header-actions"><form class="search" role="search" onsubmit="return false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><input type="search" data-i18n-ph="search.ph" placeholder="Поиск по сайту…" aria-label="Поиск по сайту"></form><a class="btn btn--primary" href="https://reports.nbt.tj"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21a8 8 0 0 0-16 0"/><circle cx="12" cy="7" r="4"/></svg><span class="lbl" data-i18n="cta.cabinet">Личный кабинет субъекта</span></a><button class="nav-toggle" aria-label="Открыть меню" aria-haspopup="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg><span data-i18n="drawer.menu">Меню</span></button></div></div></header>
+<nav class="mainnav" aria-label="Основная навигация"><div class="container"><ul>
+  <li class="has-sub"><a href="#" data-i18n="nav.about" aria-haspopup="true" aria-expanded="false">О Департаменте<svg class="chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6l4 4 4-4"/></svg></a><ul class="submenu" role="menu"><li role="menuitem"><a href="about.html" data-i18n="sub.about.1">Мандат и полномочия</a></li><li role="menuitem"><a href="about-functions.html" data-i18n="sub.about.2">Задачи и функции</a></li><li role="menuitem"><a href="about-legal.html" data-i18n="sub.about.3">Правовой статус</a></li><li role="menuitem"><a href="about-structure.html" data-i18n="sub.about.4">Структура и руководство</a></li><li role="menuitem"><a href="about-history.html" data-i18n="sub.about.5">История создания</a></li><li role="menuitem"><a href="about-contacts.html" data-i18n="sub.about.6">Контакты</a></li></ul></li>
+  <li class="has-sub"><a href="#" data-i18n="nav.national" aria-haspopup="true" aria-expanded="false">Национальная система ПОД/ФТ/ФРОМП<svg class="chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6l4 4 4-4"/></svg></a><ul class="submenu" role="menu"><li role="menuitem"><a href="national.html">Роль ДФМ</a></li><li role="menuitem"><a href="national-participants.html">Участники системы</a></li><li role="menuitem"><a href="national-nor.html">НОР</a></li><li role="menuitem"><a href="national-coordination.html">Координация</a></li></ul></li>
+  <li class="has-sub"><a href="#" data-i18n="nav.legal" aria-haspopup="true" aria-expanded="false">Правовая база<svg class="chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6l4 4 4-4"/></svg></a><ul class="submenu" role="menu"><li role="menuitem"><a href="legal.html">Законы РТ</a></li><li role="menuitem"><a href="legal-npa.html">НПА</a></li><li role="menuitem"><a href="legal-fatf.html">ФАТФ</a></li><li role="menuitem"><a href="legal-intl.html">Конвенции</a></li></ul></li>
+  <li class="has-sub"><a href="#" data-i18n="nav.subjects" aria-haspopup="true" aria-expanded="false">Поднадзорным субъектам<svg class="chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6l4 4 4-4"/></svg></a><ul class="submenu" role="menu"><li role="menuitem"><a href="subjects.html">Кто является субъектом</a></li><li role="menuitem"><a href="subjects-duties.html">Обязанности</a></li><li role="menuitem"><a href="subjects-registration.html">Постановка на учёт</a></li><li role="menuitem"><a href="subjects-reporting.html">Представление сведений</a></li><li role="menuitem"><a href="subjects-indicators.html">Индикаторы</a></li><li role="menuitem"><a href="subjects-training.html">Учебный центр</a></li><li role="menuitem"><a href="subjects-faq.html">ЧЗВ</a></li></ul></li>
+  <li class="has-sub"><a href="#" data-i18n="nav.registers" aria-haspopup="true" aria-expanded="false">Перечни и реестры<svg class="chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6l4 4 4-4"/></svg></a><ul class="submenu" role="menu"><li role="menuitem"><a href="registers.html">Перечень террористов</a></li><li role="menuitem"><a href="registers-sanctions.html">Санкционные списки</a></li><li role="menuitem"><a href="registers-subjects.html">Реестр субъектов</a></li><li role="menuitem"><a href="registers-procedure.html">Порядок исключения</a></li></ul></li>
+  <li class="has-sub"><a href="#" data-i18n="nav.intl" aria-haspopup="true" aria-expanded="false">Международное сотрудничество<svg class="chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6l4 4 4-4"/></svg></a><ul class="submenu" role="menu"><li role="menuitem"><a href="intl.html">ФАТФ и ЕАГ</a></li><li role="menuitem"><a href="intl-egmont.html">Группа Эгмонт</a></li><li role="menuitem"><a href="intl-evaluation.html">Взаимная оценка</a></li><li role="menuitem"><a href="intl-agreements.html">Двусторонние соглашения</a></li></ul></li>
+  <li class="has-sub active"><a href="#" data-i18n="nav.press" aria-haspopup="true" aria-expanded="false">Пресс-центр<svg class="chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6l4 4 4-4"/></svg></a><ul class="submenu" role="menu">
+    <li role="menuitem"><a href="news.html" data-i18n="sub.press.1">Новости и деятельность</a></li>
+    <li role="menuitem"><a href="press-publications.html" data-i18n="sub.press.2" aria-current="page">Публикации, отчёты, бюллетени</a></li>
+    <li role="menuitem"><a href="press-typologies.html" data-i18n="sub.press.3">Типологические исследования</a></li>
+    <li role="menuitem"><a href="press-media.html" data-i18n="sub.press.4">Медиа (видео / фото)</a></li>
+  </ul></li>
+</ul></div></nav>
+
+<main id="main">
+<section class="page-hero">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Навигация по сайту">
+      <a href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></a>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+      <a href="news.html" data-i18n="press.crumb">Пресс-центр</a>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+      <span class="crumb-current" data-i18n="sub.press.2">Публикации, отчёты, бюллетени</span>
+    </nav>
+    <div class="hero-badge"><span data-i18n="hero.badge">Подразделение финансовой разведки Республики Таджикистан</span></div>
+    <h1 data-i18n="press.s2.h">Публикации, отчёты, бюллетени</h1>
+    <p class="sub" data-i18n="press.lead">Официальные публикации уполномоченного органа: годовые отчёты, аналитические бюллетени, методические материалы.</p>
+  </div>
+</section>
+
+<div class="page-body"><div class="container"><div class="page-layout">
+  <aside class="page-sidebar" aria-label="Навигация по разделу">
+    <nav class="section-nav">
+      <p class="section-nav-title" data-i18n="press.nav.title">Содержание раздела</p>
+      <ul>
+        <li><a href="news.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8"/><path d="M15 18h-5"/><path d="M10 6h8v4h-8V6Z"/></svg><span data-i18n="sub.press.1">Новости и деятельность</span></a></li>
+        <li><a href="press-publications.html" class="active" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg><span data-i18n="sub.press.2">Публикации и отчёты</span></a></li>
+        <li><a href="press-typologies.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg><span data-i18n="sub.press.3">Типологии</span></a></li>
+        <li><a href="press-media.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg><span data-i18n="sub.press.4">Медиа</span></a></li>
+      </ul>
+    </nav>
+    <div class="sidebar-cta"><strong data-i18n="cta.cabinet">Личный кабинет субъекта</strong><p data-i18n="aud.c1p">Постановка на учёт и направление сведений.</p><a class="btn btn--accent btn--block" href="https://reports.nbt.tj"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21a8 8 0 0 0-16 0"/><circle cx="12" cy="7" r="4"/></svg><span data-i18n="cta.cabinet">Личный кабинет субъекта</span></a></div>
+  </aside>
+
+  <div class="page-content">
+    <section class="page-section reveal" aria-labelledby="pub-h">
+      <h2 id="pub-h"><span class="section-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></span><span data-i18n="press.s2.h">Публикации, отчёты, бюллетени</span></h2>
+
+      <div class="year-tabs" role="tablist" aria-label="Фильтр по году">
+        <button class="ytab active" role="tab" aria-selected="true" onclick="filterByYear('all',this)">Все годы</button>
+        <button class="ytab" role="tab" aria-selected="false" onclick="filterByYear('2025',this)">2025</button>
+        <button class="ytab" role="tab" aria-selected="false" onclick="filterByYear('2024',this)">2024</button>
+        <button class="ytab" role="tab" aria-selected="false" onclick="filterByYear('2023',this)">2023</button>
+      </div>
+
+      <div class="pub-list" id="pubList" aria-label="Список публикаций">
+        <div class="pub-item" data-year="2025">
+          <div class="pub-icon">PDF</div>
+          <div class="pub-body">
+            <h3>Годовой отчёт ДФМ при НБТ за 2025 год</h3>
+            <p>Отчёт о деятельности уполномоченного органа за 2025 год: статистика, результаты надзора, международные показатели.</p>
+            <div class="pub-meta">
+              <span class="pub-badge badge-annual">Годовой отчёт</span>
+              <span class="pub-date">15.03.2026</span>
+              <span class="pub-size">2.4 МБ</span>
+              <a href="#" class="btn-sm btn-sm--outline"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Скачать</a>
+            </div>
+          </div>
+        </div>
+        <div class="pub-item" data-year="2025">
+          <div class="pub-icon">PDF</div>
+          <div class="pub-body">
+            <h3>Аналитический бюллетень № 4 (2025)</h3>
+            <p>Аналитический обзор тенденций в сфере финансовой разведки за IV квартал 2025 года.</p>
+            <div class="pub-meta">
+              <span class="pub-badge badge-bulletin">Бюллетень</span>
+              <span class="pub-date">20.01.2026</span>
+              <span class="pub-size">0.8 МБ</span>
+              <a href="#" class="btn-sm btn-sm--outline"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Скачать</a>
+            </div>
+          </div>
+        </div>
+        <div class="pub-item" data-year="2024">
+          <div class="pub-icon">PDF</div>
+          <div class="pub-body">
+            <h3>Годовой отчёт ДФМ при НБТ за 2024 год</h3>
+            <p>Отчёт о деятельности уполномоченного органа за 2024 год.</p>
+            <div class="pub-meta">
+              <span class="pub-badge badge-annual">Годовой отчёт</span>
+              <span class="pub-date">10.03.2025</span>
+              <span class="pub-size">2.1 МБ</span>
+              <a href="#" class="btn-sm btn-sm--outline"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Скачать</a>
+            </div>
+          </div>
+        </div>
+        <div class="pub-item" data-year="2024">
+          <div class="pub-icon">PDF</div>
+          <div class="pub-body">
+            <h3>Методические рекомендации по идентификации клиентов (2024)</h3>
+            <p>Рекомендации для субъектов финансового мониторинга по реализации процедур НПК/ПДК.</p>
+            <div class="pub-meta">
+              <span class="pub-badge badge-method">Методические</span>
+              <span class="pub-date">01.07.2024</span>
+              <span class="pub-size">1.2 МБ</span>
+              <a href="#" class="btn-sm btn-sm--outline"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Скачать</a>
+            </div>
+          </div>
+        </div>
+        <div class="pub-item" data-year="2023">
+          <div class="pub-icon">PDF</div>
+          <div class="pub-body">
+            <h3>Годовой отчёт ДФМ при НБТ за 2023 год</h3>
+            <p>Отчёт о деятельности уполномоченного органа за 2023 год.</p>
+            <div class="pub-meta">
+              <span class="pub-badge badge-annual">Годовой отчёт</span>
+              <span class="pub-date">12.03.2024</span>
+              <span class="pub-size">1.9 МБ</span>
+              <a href="#" class="btn-sm btn-sm--outline"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Скачать</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div></div></div>
+</main>
+
+<footer class="footer"><div class="container"><div class="footer-top"><div><div class="footer-brand"><img src="assets/logo.png" alt=""><div><strong data-i18n="brand.dep">Департамент финансового мониторинга</strong><span data-i18n="brand.bank">при Национальном банке Таджикистана</span></div></div><p class="about" data-i18n="foot.about">Уполномоченный орган Республики Таджикистан в сфере ПОД/ФТ/ФРОМП.</p></div><div><h4 data-i18n="nav.press">Пресс-центр</h4><ul><li><a href="news.html" data-i18n="sub.press.1">Новости</a></li><li><a href="press-publications.html" data-i18n="sub.press.2">Публикации</a></li><li><a href="press-typologies.html" data-i18n="sub.press.3">Типологии</a></li><li><a href="press-media.html" data-i18n="sub.press.4">Медиа</a></li></ul></div><div><h4 data-i18n="nav.about">О Департаменте</h4><ul><li><a href="about.html" data-i18n="sub.about.1">Мандат и полномочия</a></li><li><a href="about-contacts.html" data-i18n="sub.about.6">Контакты</a></li></ul></div><div><h4 data-i18n="foot.contacts">Контакты</h4><div class="contact-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><div><div class="lbl" data-i18n="foot.addrl">Адрес</div><div class="val" data-i18n="foot.addr">г. Душанбе, пр. Рудаки 107/А</div></div></div><div class="hotline"><div class="lbl" data-i18n="foot.hotline">Телефон доверия</div><div class="num">+992 (44) 600-12-12</div></div></div></div><div class="footer-bottom"><span data-i18n="foot.copy">© 2026 Департамент финансового мониторинга при НБТ. Все права защищены.</span><span class="legal-links"><a href="#" data-i18n="foot.bank">Национальный банк Таджикистана</a><a href="#" data-i18n="foot.priv">Правовая информация</a></span></div></div></footer>
+<div class="drawer-backdrop"></div>
+<aside class="drawer" aria-label="Мобильное меню"><div class="drawer-head"><strong data-i18n="drawer.menu">Меню</strong><button class="drawer-close" aria-label="Закрыть меню"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button></div><nav><a href="about.html"><span data-i18n="nav.about">О Департаменте</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></a><a href="subjects.html"><span data-i18n="nav.subjects">Поднадзорным субъектам</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></a><a href="intl.html"><span data-i18n="nav.intl">Международное сотрудничество</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></a><a href="news.html"><span data-i18n="nav.press">Пресс-центр</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></a></nav><div class="drawer-foot"><a class="btn btn--primary btn--block" href="https://reports.nbt.tj" data-i18n="cta.cabinet">Личный кабинет субъекта</a></div></aside>
+<script src="app.js"></script>
+<script>
+function filterByYear(year, btn) {
+  document.querySelectorAll('.ytab').forEach(function(t){ t.classList.remove('active'); t.setAttribute('aria-selected','false'); });
+  btn.classList.add('active'); btn.setAttribute('aria-selected','true');
+  document.querySelectorAll('#pubList .pub-item').forEach(function(item){
+    item.style.display = (year === 'all' || item.getAttribute('data-year') === year) ? '' : 'none';
+  });
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Реестр субъектов финансового мониторинга — Перечни и реестры — ДФМ при НБТ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap&subset=cyrillic,cyrillic-ext,latin,latin-ext" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+.reg-meta{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:18px}
+.reg-badge-teal{background:var(--dmm-teal-600);color:#fff;font-size:.72rem;font-weight:700;padding:3px 10px;border-radius:20px;letter-spacing:.03em;text-transform:uppercase}
+.reg-basis{font-size:.8rem;color:var(--dmm-ink-600);display:flex;align-items:center;gap:6px}
+.reg-basis svg{color:var(--dmm-teal-600)}
+.reg-filter-bar{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:14px;align-items:center}
+.reg-filter-bar select{padding:8px 12px;border:1.5px solid var(--dmm-line-200);border-radius:8px;font-size:.85rem;font-family:var(--font-body);background:#fff;color:var(--dmm-ink-900);outline:none;cursor:pointer}
+.reg-filter-bar select:focus{border-color:var(--dmm-blue-600);box-shadow:0 0 0 3px rgba(30,91,168,.12)}
+.reg-filter-bar input{flex:1;min-width:220px;padding:8px 12px;border:1.5px solid var(--dmm-line-200);border-radius:8px;font-size:.85rem;font-family:var(--font-body);background:#fff;color:var(--dmm-ink-900);outline:none}
+.reg-filter-bar input:focus{border-color:var(--dmm-blue-600);box-shadow:0 0 0 3px rgba(30,91,168,.12)}
+.reg-count{font-size:.82rem;color:var(--dmm-ink-600);margin-bottom:14px;min-height:20px}
+.reg-table-wrap{overflow-x:auto;border:1px solid var(--dmm-line-200);border-radius:10px}
+.reg-table{width:100%;border-collapse:collapse;font-size:.88rem}
+.reg-table caption{text-align:left;font-size:.8rem;font-weight:600;color:var(--dmm-ink-600);padding:10px 14px;border-bottom:1px solid var(--dmm-line-200)}
+.reg-table thead th{background:var(--dmm-navy-900);color:#fff;padding:10px 14px;font-size:.8rem;font-weight:600;text-align:left;white-space:nowrap}
+.reg-table tbody tr{border-bottom:1px solid var(--dmm-line-200)}
+.reg-table tbody tr:last-child{border-bottom:none}
+.reg-table tbody tr:hover{background:var(--dmm-blue-100)}
+.reg-table tbody td{padding:10px 14px;vertical-align:top;color:var(--dmm-ink-900);line-height:1.5}
+.reg-table tbody td.name{font-weight:600}
+.reg-table tbody td.cat{font-size:.82rem}
+.reg-table tbody td.reg{font-size:.82rem;color:var(--dmm-ink-600)}
+.reg-table tbody td.date{font-size:.82rem;white-space:nowrap;color:var(--dmm-ink-600)}
+.status-badge{display:inline-block;font-size:.72rem;font-weight:700;padding:2px 8px;border-radius:4px}
+.status-badge--active{background:#dcfce7;color:#166534}
+.status-badge--suspended{background:#fef3c7;color:#92400e}
+.reg-download-row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:18px;padding-top:16px;border-top:1px solid var(--dmm-line-200)}
+.reg-download-row .lbl{font-size:.82rem;color:var(--dmm-ink-600);margin-right:4px}
+.btn-sm{display:inline-flex;align-items:center;gap:6px;padding:7px 14px;border-radius:8px;font-size:.82rem;font-weight:600;cursor:pointer;text-decoration:none;transition:background .15s,color .15s}
+.btn-sm--outline{border:1.5px solid var(--dmm-blue-600);color:var(--dmm-blue-600);background:#fff}
+.btn-sm--outline:hover{background:var(--dmm-blue-100)}
+.btn-sm--primary{background:var(--dmm-blue-600);color:#fff;border:1.5px solid var(--dmm-blue-600)}
+.btn-sm--primary:hover{background:var(--dmm-blue-500)}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Перейти к основному содержанию</a>
+<div class="topbar"><div class="container"><div class="topbar-left"><a href="sitemap.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg><span data-i18n="top.map">Карта сайта</span></a></div><div class="topbar-right"><button class="a11y-toggle" data-a11y-toggle aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a10 10 0 0 0 0 20z" fill="currentColor" stroke="none"/></svg><span data-i18n="top.a11y">Версия для слабовидящих</span></button><div class="lang" role="group" aria-label="Выбор языка"><button data-lang="tg" aria-pressed="false">ТҶ</button><button data-lang="ru" aria-pressed="true">РУ</button><button data-lang="en" aria-pressed="false">EN</button></div></div></div></div>
+<header class="masthead"><div class="container"><a class="brand" href="index.html" aria-label="На главную"><img src="assets/logo.png" alt="ДФМ при НБТ"><span class="brand-text"><strong data-i18n="brand.dep">Департамент финансового мониторинга</strong><span data-i18n="brand.bank">при Национальном банке Таджикистана</span></span></a><div class="header-actions"><form class="search" role="search" onsubmit="return false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><input type="search" data-i18n-ph="search.ph" placeholder="Поиск по сайту…" aria-label="Поиск по сайту"></form><a class="btn btn--primary" href="https://reports.nbt.tj"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21a8 8 0 0 0-16 0"/><circle cx="12" cy="7" r="4"/></svg><span class="lbl" data-i18n="cta.cabinet">Личный кабинет субъекта</span></a><button class="nav-toggle" aria-label="Открыть меню" aria-haspopup="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg><span data-i18n="drawer.menu">Меню</span></button></div></div></header>
+<nav class="mainnav" aria-label="Основная навигация"><div class="container"><ul>
+  <li class="has-sub"><a href="#" data-i18n="nav.about" aria-haspopup="true" aria-expanded="false">О Департаменте<svg class="chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6l4 4 4-4"/></svg></a><ul class="submenu" role="menu"><li role="menuitem"><a href="about.html" data-i18n="sub.about.1">Мандат и полномочия</a></li><li role="menuitem"><a href="about-functions.html" data-i18n="sub.about.2">Задачи и функции</a></li><li role="menuitem"><a href="about-legal.html" data-i18n="sub.about.3">Правовой статус</a></li><li role="menuitem"><a href="about-structure.html" data-i18n="sub.about.4">Структура и руководство</a></li><li role="menuitem"><a href="about-history.html" data-i18n="sub.about.5">История создания</a></li><li role="menuitem"><a href="about-contacts.html" data-i18n="sub.about.6">Контакты</a></li></ul></li>
+  <li class="has-sub"><a href="#" data-i18n="nav.national" aria-haspopup="true" aria-expanded="false">Национальная система ПОД/ФТ/ФРОМП<svg class="chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6l4 4 4-4"/></svg></a><ul class="submenu" role="menu"><li role="menuitem"><a href="national.html" data-i18n="sub.national.1">Роль ДФМ</a></li><li role="menuitem"><a href="national-participants.html" data-i18n="sub.national.2">Участники системы</a></li><li role="menuitem"><a href="national-nor.html" data-i18n="sub.national.3">НОР</a></li><li role="menuitem"><a href="national-coordination.html" data-i18n="sub.national.4">Координация</a></li></ul></li>
+  <li class="has-sub"><a href="#" data-i18n="nav.legal" aria-haspopup="true" aria-expanded="false">Правовая база<svg class="chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6l4 4 4-4"/></svg></a><ul class="submenu" role="menu"><li role="menuitem"><a href="legal.html" data-i18n="sub.legal.1">Законы РТ</a></li><li role="menuitem"><a href="legal-npa.html" data-i18n="sub.legal.2">НПА</a></li><li role="menuitem"><a href="legal-fatf.html" data-i18n="sub.legal.3">ФАТФ</a></li><li role="menuitem"><a href="legal-intl.html" data-i18n="sub.legal.4">Конвенции</a></li></ul></li>
+  <li class="has-sub"><a href="#" data-i18n="nav.subjects" aria-haspopup="true" aria-expanded="false">Поднадзорным субъектам<svg class="chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6l4 4 4-4"/></svg></a><ul class="submenu" role="menu"><li role="menuitem"><a href="subjects.html" data-i18n="sub.subjects.1">Кто является субъектом</a></li><li role="menuitem"><a href="subjects-duties.html" data-i18n="sub.subjects.2">Обязанности и требования</a></li><li role="menuitem"><a href="subjects-registration.html" data-i18n="sub.subjects.3">Постановка на учёт</a></li><li role="menuitem"><a href="subjects-reporting.html" data-i18n="sub.subjects.4">Порядок представления сведений</a></li><li role="menuitem"><a href="subjects-indicators.html" data-i18n="sub.subjects.5">Индикаторы подозрительных операций</a></li><li role="menuitem"><a href="subjects-training.html" data-i18n="sub.subjects.6">Учебно-методический центр</a></li><li role="menuitem"><a href="subjects-faq.html" data-i18n="sub.subjects.7">Разъяснения и ЧЗВ</a></li></ul></li>
+  <li class="has-sub active"><a href="#" data-i18n="nav.registers" aria-haspopup="true" aria-expanded="false">Перечни и реестры<svg class="chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6l4 4 4-4"/></svg></a><ul class="submenu" role="menu">
+    <li role="menuitem"><a href="registers.html" data-i18n="sub.registers.1">Перечень террористов</a></li>
+    <li role="menuitem"><a href="registers-sanctions.html" data-i18n="sub.registers.2">Санкционные списки</a></li>
+    <li role="menuitem"><a href="registers-subjects.html" data-i18n="sub.registers.3" aria-current="page">Реестр субъектов</a></li>
+    <li role="menuitem"><a href="registers-procedure.html" data-i18n="sub.registers.4">Порядок исключения / включения</a></li>
+  </ul></li>
+  <li class="has-sub"><a href="#" data-i18n="nav.intl" aria-haspopup="true" aria-expanded="false">Международное сотрудничество<svg class="chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6l4 4 4-4"/></svg></a><ul class="submenu" role="menu"><li role="menuitem"><a href="intl.html">ФАТФ и ЕАГ</a></li><li role="menuitem"><a href="intl-egmont.html">Группа Эгмонт</a></li><li role="menuitem"><a href="intl-evaluation.html">Взаимная оценка</a></li><li role="menuitem"><a href="intl-agreements.html">Двусторонние соглашения</a></li></ul></li>
+  <li class="has-sub"><a href="#" data-i18n="nav.press" aria-haspopup="true" aria-expanded="false">Пресс-центр<svg class="chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6l4 4 4-4"/></svg></a><ul class="submenu" role="menu"><li role="menuitem"><a href="news.html" data-i18n="sub.press.1">Новости</a></li><li role="menuitem"><a href="press-publications.html">Публикации</a></li><li role="menuitem"><a href="press-typologies.html">Типологии</a></li><li role="menuitem"><a href="press-media.html">Медиа</a></li></ul></li>
+</ul></div></nav>
+
+<main id="main">
+<section class="page-hero">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Навигация по сайту">
+      <a href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></a>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+      <a href="registers.html" data-i18n="reg.crumb">Перечни и реестры</a>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+      <span class="crumb-current" data-i18n="sub.registers.3">Реестр субъектов</span>
+    </nav>
+    <div class="hero-badge"><span data-i18n="hero.badge">Подразделение финансовой разведки Республики Таджикистан</span></div>
+    <h1 data-i18n="reg.s3.h">Реестр субъектов финансового мониторинга</h1>
+    <p class="sub" data-i18n="reg.s3.lead">Публичный реестр субъектов первичного финансового мониторинга и УНФПП, поставленных на учёт в ДФМ при НБТ.</p>
+  </div>
+</section>
+
+<div class="page-body"><div class="container"><div class="page-layout">
+  <aside class="page-sidebar" aria-label="Навигация по разделу">
+    <nav class="section-nav">
+      <p class="section-nav-title" data-i18n="reg.nav.title">Содержание раздела</p>
+      <ul>
+        <li><a href="registers.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg><span data-i18n="sub.registers.1">Перечень террористов</span></a></li>
+        <li><a href="registers-sanctions.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg><span data-i18n="sub.registers.2">Санкционные списки</span></a></li>
+        <li><a href="registers-subjects.html" class="active" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 9h18"/><path d="M9 21V9"/></svg><span data-i18n="sub.registers.3">Реестр субъектов</span></a></li>
+        <li><a href="registers-procedure.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg><span data-i18n="sub.registers.4">Порядок исключения / включения</span></a></li>
+      </ul>
+    </nav>
+    <div class="sidebar-cta"><strong data-i18n="cta.cabinet">Личный кабинет субъекта</strong><p data-i18n="aud.c1p">Постановка на учёт и направление сведений.</p><a class="btn btn--accent btn--block" href="https://reports.nbt.tj"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21a8 8 0 0 0-16 0"/><circle cx="12" cy="7" r="4"/></svg><span data-i18n="cta.cabinet">Личный кабинет субъекта</span></a></div>
+  </aside>
+
+  <div class="page-content">
+    <section class="page-section reveal" aria-labelledby="reg-s3-h">
+      <h2 id="reg-s3-h"><span class="section-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 9h18"/><path d="M9 21V9"/></svg></span><span data-i18n="reg.s3.h">Реестр субъектов финансового мониторинга</span></h2>
+
+      <div class="reg-meta">
+        <span class="reg-badge-teal"><span data-i18n="reg.s1.updated">Актуализировано</span>: 01.07.2026</span>
+        <span class="reg-basis"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span data-i18n="reg.s3.basis">Статья 16 Закона РТ № 684 | Приказ ДФМ № 44 от 20.05.2022</span></span>
+      </div>
+
+      <div class="reg-filter-bar" role="search" aria-label="Фильтр реестра субъектов">
+        <input type="search" id="subjectSearch" placeholder="Поиск по наименованию…" aria-label="Поиск по наименованию субъекта" oninput="filterSubjects()">
+        <select id="catFilter" aria-label="Фильтр по категории" onchange="filterSubjects()">
+          <option value="" data-i18n="reg.s3.filter.all">Все категории</option>
+          <option value="bank">Банки и небанковские КО</option>
+          <option value="ins">Страховые организации</option>
+          <option value="nco">НКО и фонды</option>
+          <option value="re">Риелторы</option>
+          <option value="notary">Нотариусы</option>
+        </select>
+        <select id="statusFilter" aria-label="Фильтр по статусу" onchange="filterSubjects()">
+          <option value="">Все статусы</option>
+          <option value="active" data-i18n="reg.s3.filter.active">Активен</option>
+          <option value="suspended" data-i18n="reg.s3.filter.suspended">Приостановлен</option>
+        </select>
+      </div>
+      <p class="reg-count" id="subjectCount" aria-live="polite" aria-atomic="true">Показано 4 из 4 записей</p>
+
+      <div class="reg-table-wrap">
+        <table class="reg-table" id="subjectTable" aria-label="Реестр субъектов финансового мониторинга">
+          <caption>Субъекты первичного финансового мониторинга, поставленные на учёт. Данные — плейсхолдеры.</caption>
+          <thead>
+            <tr>
+              <th scope="col">Наименование</th>
+              <th scope="col">Категория</th>
+              <th scope="col">Рег. данные</th>
+              <th scope="col">Статус</th>
+              <th scope="col">Дата учёта</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-cat="bank" data-status="active">
+              <td class="name">ОАО «Банк Эсхата»</td>
+              <td class="cat">Банки и небанковские КО</td>
+              <td class="reg">ГРН: 0000000101<br>Лицензия НБТ № 001</td>
+              <td><span class="status-badge status-badge--active">Активен</span></td>
+              <td class="date">15.06.2022</td>
+            </tr>
+            <tr data-cat="ins" data-status="active">
+              <td class="name">ЗАО «Страховая компания Тоджик»</td>
+              <td class="cat">Страховые организации</td>
+              <td class="reg">ГРН: 0000000202<br>Лицензия МФ № 0045</td>
+              <td><span class="status-badge status-badge--active">Активен</span></td>
+              <td class="date">01.07.2022</td>
+            </tr>
+            <tr data-cat="nco" data-status="suspended">
+              <td class="name">Общественный фонд «Содействие»</td>
+              <td class="cat">НКО и фонды</td>
+              <td class="reg">ГРН: 0000000303</td>
+              <td><span class="status-badge status-badge--suspended">Приостановлен</span></td>
+              <td class="date">12.09.2022</td>
+            </tr>
+            <tr data-cat="notary" data-status="active">
+              <td class="name">Нотариальная контора «Рустам Назаров»</td>
+              <td class="cat">Нотариусы</td>
+              <td class="reg">Удостоверение № 00789</td>
+              <td><span class="status-badge status-badge--active">Активен</span></td>
+              <td class="date">20.11.2022</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="reg-download-row">
+        <span class="lbl">Скачать реестр:</span>
+        <a href="#" class="btn-sm btn-sm--outline">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          <span data-i18n="reg.download.pdf">Скачать PDF</span>
+        </a>
+        <a href="#" class="btn-sm btn-sm--outline">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          <span data-i18n="reg.download.csv">Скачать CSV</span>
+        </a>
+        <a href="subjects-registration.html" class="btn-sm btn-sm--primary">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+          Постановка на учёт
+        </a>
+      </div>
+    </section>
+  </div>
+</div></div></div>
+</main>
+
+<footer class="footer"><div class="container"><div class="footer-top"><div><div class="footer-brand"><img src="assets/logo.png" alt=""><div><strong data-i18n="brand.dep">Департамент финансового мониторинга</strong><span data-i18n="brand.bank">при Национальном банке Таджикистана</span></div></div><p class="about" data-i18n="foot.about">Уполномоченный орган Республики Таджикистан в сфере ПОД/ФТ/ФРОМП.</p></div><div><h4 data-i18n="nav.registers">Перечни и реестры</h4><ul><li><a href="registers.html" data-i18n="sub.registers.1">Перечень террористов</a></li><li><a href="registers-sanctions.html" data-i18n="sub.registers.2">Санкционные списки</a></li><li><a href="registers-subjects.html" data-i18n="sub.registers.3">Реестр субъектов</a></li><li><a href="registers-procedure.html" data-i18n="sub.registers.4">Порядок исключения</a></li></ul></div><div><h4 data-i18n="nav.about">О Департаменте</h4><ul><li><a href="about.html" data-i18n="sub.about.1">Мандат и полномочия</a></li><li><a href="about-contacts.html" data-i18n="sub.about.6">Контакты</a></li></ul></div><div><h4 data-i18n="foot.contacts">Контакты</h4><div class="contact-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><div><div class="lbl" data-i18n="foot.addrl">Адрес</div><div class="val" data-i18n="foot.addr">г. Душанбе, пр. Рудаки 107/А</div></div></div><div class="hotline"><div class="lbl" data-i18n="foot.hotline">Телефон доверия</div><div class="num">+992 (44) 600-12-12</div></div></div></div><div class="footer-bottom"><span data-i18n="foot.copy">© 2026 Департамент финансового мониторинга при НБТ. Все права защищены.</span><span class="legal-links"><a href="#" data-i18n="foot.bank">Национальный банк Таджикистана</a><a href="#" data-i18n="foot.priv">Правовая информация</a></span></div></div></footer>
+<div class="drawer-backdrop"></div>
+<aside class="drawer" aria-label="Мобильное меню"><div class="drawer-head"><strong data-i18n="drawer.menu">Меню</strong><button class="drawer-close" aria-label="Закрыть меню"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button></div><nav><a href="about.html"><span data-i18n="nav.about">О Департаменте</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></a><a href="subjects.html"><span data-i18n="nav.subjects">Поднадзорным субъектам</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></a><a href="registers.html"><span data-i18n="nav.registers">Перечни и реестры</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></a><a href="news.html"><span data-i18n="nav.press">Пресс-центр</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></a></nav><div class="drawer-foot"><a class="btn btn--primary btn--block" href="https://reports.nbt.tj" data-i18n="cta.cabinet">Личный кабинет субъекта</a></div></aside>
+<script src="app.js"></script>
+<script>
+function filterSubjects() {
+  var table = document.getElementById('subjectTable');
+  var countEl = document.getElementById('subjectCount');
+  var rows = table.querySelectorAll('tbody tr');
+  var q = document.getElementById('subjectSearch').value.trim().toLowerCase();
+  var cat = document.getElementById('catFilter').value;
+  var status = document.getElementById('statusFilter').value;
+  var visible = 0;
+  rows.forEach(function(row) {
+    var text = row.textContent.toLowerCase();
+    var rowCat = row.getAttribute('data-cat') || '';
+    var rowStatus = row.getAttribute('data-status') || '';
+    var show = (!q || text.includes(q)) && (!cat || rowCat === cat) && (!status || rowStatus === status);
+    row.style.display = show ? '' : 'none';
+    if (show) visible++;
+  });
+  var total = rows.length;
+  countEl.textContent = 'Показано ' + visible + ' из ' + total + ' записей';
+}
+</script>
+</body>
+</html>

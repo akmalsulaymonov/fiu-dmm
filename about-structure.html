@@ -3,12 +3,25 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>О Департаменте — ДФМ при НБТ</title>
-<meta name="description" content="О Департаменте финансового мониторинга при Национальном банке Таджикистана — уполномоченном органе финансовой разведки Республики Таджикистан.">
+<title>Структура и руководство — ДФМ при НБТ</title>
+<meta name="description" content="Структура и руководство Департамента финансового мониторинга при Национальном банке Таджикистана.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap&subset=cyrillic,cyrillic-ext,latin,latin-ext" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<style>
+.leader-block{display:flex;gap:24px;align-items:flex-start;background:#fff;border:1.5px solid var(--dmm-line-200);border-radius:10px;padding:20px 24px;margin-bottom:28px}
+.leader-photo{width:120px;height:120px;border-radius:10px;overflow:hidden;flex-shrink:0;background:var(--dmm-blue-100);border:2px solid var(--dmm-line-200)}
+.leader-photo img{width:100%;height:100%;object-fit:cover;object-position:top center}
+.leader-info{padding-top:4px}
+.leader-name{font-size:1.05rem;font-weight:700;color:var(--dmm-navy-900);margin-bottom:6px}
+.leader-title{font-size:.85rem;color:var(--dmm-ink-600);line-height:1.5}
+.units-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
+.units-list li{display:flex;align-items:flex-start;gap:12px;background:#fff;border:1.5px solid var(--dmm-line-200);border-radius:10px;padding:14px 16px;transition:border-color .15s,box-shadow .15s}
+.units-list li:hover{border-color:var(--dmm-teal-600);box-shadow:0 2px 8px rgba(10,37,64,.07)}
+.units-list li svg{color:var(--dmm-teal-600);flex-shrink:0;margin-top:2px}
+.units-list li span{font-size:.88rem;font-weight:600;color:var(--dmm-navy-900);line-height:1.4}
+</style>
 </head>
 <body>
 
@@ -68,10 +81,10 @@
       <li class="has-sub active">
         <a href="#" data-i18n="nav.about" aria-haspopup="true" aria-expanded="false">О Департаменте<svg class="chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6l4 4 4-4"/></svg></a>
         <ul class="submenu" role="menu">
-          <li role="menuitem"><a href="about.html" data-i18n="sub.about.1" aria-current="page">Мандат и полномочия</a></li>
+          <li role="menuitem"><a href="about.html" data-i18n="sub.about.1">Мандат и полномочия</a></li>
           <li role="menuitem"><a href="about-functions.html" data-i18n="sub.about.2">Задачи и функции</a></li>
           <li role="menuitem"><a href="about-legal.html" data-i18n="sub.about.3">Правовой статус</a></li>
-          <li role="menuitem"><a href="about-structure.html" data-i18n="sub.about.4">Структура и руководство</a></li>
+          <li role="menuitem"><a href="about-structure.html" data-i18n="sub.about.4" aria-current="page">Структура и руководство</a></li>
           <li role="menuitem"><a href="about-history.html" data-i18n="sub.about.5">История создания</a></li>
           <li role="menuitem"><a href="about-contacts.html" data-i18n="sub.about.6">Контакты</a></li>
         </ul>
@@ -149,12 +162,12 @@
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
       <a href="about.html" data-i18n="about.crumb">О Департаменте</a>
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
-      <span class="crumb-current" data-i18n="sub.about.1">Мандат и полномочия</span>
+      <span class="crumb-current" data-i18n="sub.about.4">Структура и руководство</span>
     </nav>
     <div class="hero-badge">
       <span data-i18n="hero.badge">Подразделение финансовой разведки Республики Таджикистан</span>
     </div>
-    <h1 data-i18n="about.s1.h">Мандат и полномочия</h1>
+    <h1 data-i18n="about.s4.h">Структура и руководство</h1>
     <p class="sub" data-i18n="about.hero.sub">Уполномоченный орган финансовой разведки Республики Таджикистан</p>
   </div>
 </section>
@@ -170,7 +183,7 @@
           <p class="section-nav-title" data-i18n="about.nav.title">Содержание раздела</p>
           <ul>
             <li>
-              <a href="about.html" class="active" aria-current="page">
+              <a href="about.html">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
                 <span data-i18n="about.s1.h">Мандат и полномочия</span>
               </a>
@@ -188,7 +201,7 @@
               </a>
             </li>
             <li>
-              <a href="about-structure.html">
+              <a href="about-structure.html" class="active" aria-current="page">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="6" height="5" rx="1"/><rect x="9" y="3" width="6" height="5" rx="1"/><rect x="16" y="7" width="6" height="5" rx="1"/><path d="M5 12v4M12 8v10M19 12v4M5 16h14"/></svg>
                 <span data-i18n="about.s4.h">Структура и руководство</span>
               </a>
@@ -210,7 +223,7 @@
         <div class="sidebar-cta">
           <strong data-i18n="cta.cabinet">Личный кабинет субъекта</strong>
           <p data-i18n="aud.c1p">Требования к постановке на учёт, порядку представления сведений, организации внутреннего контроля и доступу к электронным сервисам.</p>
-          <a class="btn btn--accent btn--block" href="#">
+          <a class="btn btn--accent btn--block" href="https://reports.nbt.tj">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21a8 8 0 0 0-16 0"/><circle cx="12" cy="7" r="4"/></svg>
             <span data-i18n="cta.cabinet">Личный кабинет субъекта</span>
           </a>
@@ -220,57 +233,54 @@
       <!-- ===== CONTENT ===== -->
       <div class="page-content">
 
-        <!-- Section 1: Мандат и полномочия -->
-        <section class="page-section reveal" id="mandate" aria-labelledby="s1-h">
-          <h2 id="s1-h">
+        <section class="page-section reveal" id="structure" aria-labelledby="s4-h">
+          <h2 id="s4-h">
             <span class="section-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="6" height="5" rx="1"/><rect x="9" y="3" width="6" height="5" rx="1"/><rect x="16" y="7" width="6" height="5" rx="1"/><path d="M5 12v4M12 8v10M19 12v4M5 16h14"/></svg>
             </span>
-            <span data-i18n="about.s1.h">Мандат и полномочия</span>
+            <span data-i18n="about.s4.h">Структура и руководство</span>
           </h2>
-          <p class="lead" data-i18n="about.s1.p1">Департамент финансового мониторинга при Национальном банке Таджикистана (ДФМ при НБТ) является уполномоченным органом Республики Таджикистан в сфере ПОД/ФТ/ФРОМП.</p>
-          <p data-i18n="about.s1.status">Статус уполномоченного органа присвоен Департаменту Законом Республики Таджикистан «О ПОД/ФТ» № 684 от 25.03.2011 (в действующей редакции). Департамент функционирует как подразделение финансовой разведки (FIU) в соответствии со стандартами ФАТФ и является членом Группы Эгмонт.</p>
+          <p class="lead" data-i18n="about.s4.lead">ДФМ при НБТ возглавляет руководитель, назначаемый Председателем Национального банка Таджикистана. В структуру входят специализированные отделы финансового мониторинга, надзора и международного сотрудничества.</p>
 
-          <h3 class="subsection-h" data-i18n="about.powers.h">Полномочия</h3>
-          <ul class="powers-list">
-            <li data-i18n="about.pow.1">осуществляет сбор, обработку, систематизацию и анализ сведений, представляемых субъектами финансового мониторинга об операциях, подлежащих финансовому мониторингу</li>
-            <li data-i18n="about.pow.2">осуществляет финансовую разведку в целях выявления, предупреждения и пресечения легализации преступных доходов, финансирования терроризма и финансирования распространения ОМП</li>
-            <li data-i18n="about.pow.3">координирует деятельность государственных органов в сфере ПОД/ФТ/ФРОМП и возглавляет национальную систему финансового мониторинга</li>
-            <li data-i18n="about.pow.4">осуществляет надзор за выполнением поднадзорными субъектами требований законодательства и вправе применять меры надзорного реагирования</li>
-            <li data-i18n="about.pow.5">ведёт перечень организаций и лиц, в отношении которых имеются сведения об их причастности к экстремистской деятельности или терроризму</li>
-            <li data-i18n="about.pow.6">проводит национальную оценку рисков (НОР) в сфере ПОД/ФТ/ФРОМП и координирует меры по снижению выявленных рисков</li>
-            <li data-i18n="about.pow.7">представляет Республику Таджикистан в ФАТФ, ЕАГ, Группе Эгмонт и иных международных организациях в сфере ПОД/ФТ/ФРОМП</li>
-            <li data-i18n="about.pow.8">вправе запрашивать от государственных органов, организаций и физических лиц документы и информацию, необходимые для реализации возложенных функций</li>
-          </ul>
-
-          <div class="legal-basis-box">
-            <h3 data-i18n="about.basis.h">Правовая основа</h3>
-            <div class="basis-list">
-              <div class="basis-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-                <div>
-                  <a href="#" class="basis-title" data-i18n="about.basis.1">Закон РТ «О ПОД/ФТ» № 684 от 25.03.2011</a>
-                  <span class="basis-sub" data-i18n="about.basis.1s">Основной закон, устанавливающий статус и полномочия ДФМ</span>
-                </div>
-              </div>
-              <div class="basis-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-                <div>
-                  <a href="#" class="basis-title" data-i18n="about.basis.2">Положение о Департаменте финансового мониторинга при НБТ</a>
-                  <span class="basis-sub" data-i18n="about.basis.2s">Утверждено Советом директоров НБТ</span>
-                </div>
-              </div>
-              <div class="basis-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-                <div>
-                  <a href="#" class="basis-title" data-i18n="about.basis.3">40 Рекомендаций ФАТФ</a>
-                  <span class="basis-sub" data-i18n="about.basis.3s">Международные стандарты, имплементированные в законодательство РТ</span>
-                </div>
-              </div>
+          <h3 class="subsection-h" data-i18n="about.leader.h">Руководство</h3>
+          <div class="leader-block">
+            <div class="leader-photo">
+              <img src="assets/director.jpg" alt="Мирзоалиев Халим Саидахмадович — Директор ДФМ при НБТ">
+            </div>
+            <div class="leader-info">
+              <div class="leader-name">Мирзоалиев Халим Саидахмадович</div>
+              <div class="leader-title">Директор Департамента финансового мониторинга при Национальном банке Таджикистана</div>
             </div>
           </div>
-        </section>
 
+          <h3 class="subsection-h" data-i18n="about.units.h">Структурные подразделения</h3>
+          <ul class="units-list">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+              <span>Отдел анализа и исследования</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4.03 3 9 3s9-1.34 9-3"/></svg>
+              <span>Отдел обработки информации</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+              <span>Отдел правовой поддержки</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              <span>Отдел международного сотрудничества</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+              <span>Отдел инспекции</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+              <span>Учебно-методический центр</span>
+            </li>
+          </ul>
+        </section>
 
       </div><!-- /page-content -->
     </div><!-- /page-layout -->
