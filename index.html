@@ -141,8 +141,13 @@
 
 <!-- ============ HERO ============ -->
 <section class="hero">
+  <!-- geometric background grid -->
+  <div class="hero__grid" aria-hidden="true"></div>
+  <!-- scan line sweep (fires once) -->
+  <div class="hero__scan" aria-hidden="true"></div>
+
   <div class="container">
-    <div class="hero__copy reveal">
+    <div class="hero__copy hero--stagger">
       <span class="hero__badge">
         <span class="dot"></span>
         <span data-i18n="hero.badge">Подразделение финансовой разведки Республики Таджикистан</span>
@@ -155,21 +160,34 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 15l2 2 4-4"/></svg>
           <span data-i18n="hero.cta1">Подать сообщение</span>
         </a>
-        <a class="btn btn--ghost-light btn--lg" href="#">
+        <a class="btn btn--ghost-light btn--lg" href="subjects.html">
           <span data-i18n="hero.cta2">Изучить требования</span>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
       </div>
       <div class="hero__stats">
-        <div class="hero__stat"><strong data-i18n="hero.stat1">1 200+</strong><span data-i18n="hero.stat1l">субъектов мониторинга</span></div>
-        <div class="hero__stat"><strong data-i18n="hero.stat2">40</strong><span data-i18n="hero.stat2l">Рекомендаций ФАТФ</span></div>
-        <div class="hero__stat"><strong data-i18n="hero.stat3">24/7</strong><span data-i18n="hero.stat3l">приём сообщений</span></div>
+        <div class="hero__stat hero__stat--1"><strong data-i18n="hero.stat1">1 200+</strong><span data-i18n="hero.stat1l">субъектов мониторинга</span></div>
+        <div class="hero__stat hero__stat--2"><strong data-i18n="hero.stat2">40</strong><span data-i18n="hero.stat2l">Рекомендаций ФАТФ</span></div>
+        <div class="hero__stat hero__stat--3"><strong data-i18n="hero.stat3">24/7</strong><span data-i18n="hero.stat3l">приём сообщений</span></div>
       </div>
     </div>
-    <div class="hero__crest reveal" data-delay="120">
+
+    <div class="hero__crest">
+      <!-- outer rotating ring -->
+      <div class="crest-orbit" aria-hidden="true"></div>
+      <!-- middle dashed ring -->
       <div class="crest-ring">
-        <img src="assets/logo.png" alt="">
+        <!-- glow behind logo -->
+        <div class="crest-glow" aria-hidden="true"></div>
+        <img src="assets/logo.png" alt="" class="crest-img" id="hero-logo">
       </div>
+      <!-- corner accent marks -->
+      <svg class="crest-corners" viewBox="0 0 340 340" fill="none" aria-hidden="true">
+        <path d="M20 60 L20 20 L60 20" stroke="rgba(201,162,39,.45)" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M280 20 L320 20 L320 60" stroke="rgba(201,162,39,.45)" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M20 280 L20 320 L60 320" stroke="rgba(201,162,39,.45)" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M280 320 L320 320 L320 280" stroke="rgba(201,162,39,.45)" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
     </div>
   </div>
 </section>

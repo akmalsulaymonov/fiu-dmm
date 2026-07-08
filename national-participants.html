@@ -268,49 +268,77 @@
           <h3 class="subsection-h" data-i18n="nat.scheme.h">Схема взаимодействия участников</h3>
 
           <div class="nat-flow" role="img" aria-label="Схема взаимодействия участников национальной системы ПОД/ФТ/ФРОМУ">
-            <div class="nat-flow-inner">
-              <div class="nf-node nf-node--subjects">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-                <span>Субъекты мониторинга</span>
-              </div>
-              <div class="nf-arrow">
-                <svg viewBox="0 0 40 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h32M28 6l8 6-8 6"/></svg>
-                <span>сведения об операциях</span>
-              </div>
-              <div class="nf-node nf-node--dfm">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                <span>ДФМ при НБТ</span>
-              </div>
-              <div class="nf-arrow">
-                <svg viewBox="0 0 40 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h32M28 6l8 6-8 6"/></svg>
-                <span>финансовая разведка</span>
-              </div>
-              <div class="nf-node nf-node--law">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M9 15l2 2 4-4"/></svg>
-                <span>Правоохранительные органы</span>
-              </div>
-            </div>
-            <div class="nat-flow-bottom">
-              <div class="nf-side">
-                <div class="nf-side-node">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 7h20M7 7V4a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v3"/><rect x="7" y="12" width="10" height="9"/></svg>
-                  <span>Надзорные органы</span>
+            <div class="nf-diagram">
+
+              <!-- TOP: Надзорные органы -->
+              <div class="nfd-top">
+                <div class="nfd-sat nfd-sat--oversight">
+                  <div class="nfd-sat-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 7h20M7 7V4a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v3"/><rect x="7" y="12" width="10" height="9"/></svg>
+                  </div>
+                  <div class="nfd-sat-name">Надзорные органы</div>
+                  <div class="nfd-sat-sub">НБТ, АМСФО и иные регуляторы</div>
                 </div>
-                <div class="nf-side-arrow">
-                  <svg viewBox="0 0 24 40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v32M6 10l6-6 6 6M6 30l6 6 6-6"/></svg>
-                  <span>двустороннее взаимодействие</span>
+                <div class="nfd-conn nfd-conn--v">
+                  <div class="nfd-conn-line nfd-conn-line--v"></div>
+                  <span class="nfd-conn-label">надзор и координация</span>
                 </div>
               </div>
-              <div class="nf-side">
-                <div class="nf-side-node">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-                  <span>Зарубежные ПФР</span>
+
+              <!-- MIDDLE: Субъекты ← ДФМ → Правоохранительные -->
+              <div class="nfd-mid">
+                <div class="nfd-sat nfd-sat--subjects">
+                  <div class="nfd-sat-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                  </div>
+                  <div class="nfd-sat-name">Субъекты финансового мониторинга</div>
+                  <div class="nfd-sat-sub">банки, МФО, нотариусы, адвокаты</div>
                 </div>
-                <div class="nf-side-arrow">
-                  <svg viewBox="0 0 24 40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v32M6 10l6-6 6 6M6 30l6 6 6-6"/></svg>
-                  <span>обмен разведкой</span>
+
+                <div class="nfd-conn nfd-conn--h nfd-conn--right">
+                  <div class="nfd-conn-line nfd-conn-line--h"></div>
+                  <span class="nfd-conn-label">сведения об операциях →</span>
+                </div>
+
+                <div class="nfd-hub">
+                  <div class="nfd-hub-ring">
+                    <div class="nfd-hub-icon">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                  </div>
+                  <div class="nfd-hub-name">ДФМ при НБТ</div>
+                  <div class="nfd-hub-sub">Уполномоченный орган финансовой разведки</div>
+                </div>
+
+                <div class="nfd-conn nfd-conn--h nfd-conn--right">
+                  <div class="nfd-conn-line nfd-conn-line--h"></div>
+                  <span class="nfd-conn-label">→ финансовая разведка</span>
+                </div>
+
+                <div class="nfd-sat nfd-sat--law">
+                  <div class="nfd-sat-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M9 15l2 2 4-4"/></svg>
+                  </div>
+                  <div class="nfd-sat-name">Правоохранительные и судебные органы</div>
+                  <div class="nfd-sat-sub">следствие, прокуратура, суды</div>
                 </div>
               </div>
+
+              <!-- BOTTOM: Зарубежные ПФР -->
+              <div class="nfd-bot">
+                <div class="nfd-conn nfd-conn--v">
+                  <div class="nfd-conn-line nfd-conn-line--v"></div>
+                  <span class="nfd-conn-label">обмен финансовой разведкой</span>
+                </div>
+                <div class="nfd-sat nfd-sat--intl">
+                  <div class="nfd-sat-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                  </div>
+                  <div class="nfd-sat-name">Зарубежные ПФР</div>
+                  <div class="nfd-sat-sub">ФАТФ, ЕАГ, Группа Эгмонт</div>
+                </div>
+              </div>
+
             </div>
           </div>
 
