@@ -1093,9 +1093,31 @@ function initReveal() {
   els.forEach(el => io.observe(el));
 }
 
+function initScrollHeader() {
+  const masthead = document.querySelector(".masthead");
+  if (!masthead) return;
+  const onScroll = () => {
+    masthead.classList.toggle("scrolled", window.scrollY > 40);
+  };
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+}
+
+function initIOSSafari() {
+  // Prevent iOS Safari from zooming on input focus (font-size must be >=16px)
+  const inputs = document.querySelectorAll("input, select, textarea");
+  inputs.forEach(el => {
+    if (parseFloat(getComputedStyle(el).fontSize) < 16) {
+      el.style.fontSize = "16px";
+    }
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   initLang();
   initA11y();
   initDrawer();
   initReveal();
+  initScrollHeader();
+  initIOSSafari();
 });
