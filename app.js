@@ -56,8 +56,8 @@ const I18N = {
     "hero.titleAccent": "ПОД/ФТ/ФРОМУ",
     "hero.title2": " Республики Таджикистан",
     "hero.sub": "Департамент финансового мониторинга при НБТ осуществляет сбор и анализ финансовых разведывательных данных, координирует национальную систему ПОД/ФТ/ФРОМУ, осуществляет надзор за поднадзорными субъектами и представляет страну в международных организациях.",
-    "hero.cta1": "Мандат и полномочия",
-    "hero.cta2": "Национальная система ПОД/ФТ",
+    "hero.cta1": "Подать сообщение",
+    "hero.cta2": "Изучить требования",
     "func.eyebrow": "Уполномоченный орган",
     "func.title": "Функции Департамента",
     "func.link": "Мандат и полномочия",
@@ -1070,8 +1070,33 @@ function initDrawer() {
   openBtn && openBtn.addEventListener("click", open);
   closeBtn && closeBtn.addEventListener("click", close);
   backdrop && backdrop.addEventListener("click", close);
-  drawer.querySelectorAll("a").forEach(a => a.addEventListener("click", close));
+  // only close on real page-navigation links (not accordion toggle buttons)
+  drawer.querySelectorAll(".drawer-sub a, .drawer-foot a").forEach(a => {
+    a.addEventListener("click", close);
+  });
   document.addEventListener("keydown", e => { if (e.key === "Escape") close(); });
+}
+
+function initDrawerAccordion() {
+  const btns = document.querySelectorAll(".drawer-nav-btn");
+  btns.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const expanded = btn.getAttribute("aria-expanded") === "true";
+      const subId = btn.getAttribute("aria-controls");
+      const sub = document.getElementById(subId);
+      // collapse all others
+      btns.forEach(b => {
+        if (b !== btn) {
+          b.setAttribute("aria-expanded", "false");
+          const s = document.getElementById(b.getAttribute("aria-controls"));
+          s && s.classList.remove("open");
+        }
+      });
+      // toggle this one
+      btn.setAttribute("aria-expanded", String(!expanded));
+      sub && sub.classList.toggle("open", !expanded);
+    });
+  });
 }
 
 function initReveal() {
@@ -1117,6 +1142,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initLang();
   initA11y();
   initDrawer();
+  initDrawerAccordion();
   initReveal();
   initScrollHeader();
   initIOSSafari();
